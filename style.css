@@ -1,0 +1,379 @@
+/* style.css FINAL GABUNGAN UNTUK index.html + ranks.html */
+
+body {
+  background: #0f0f0f;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #111;
+  border-bottom: 1px solid #222;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ffcc00;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.logo {
+  font-size: 1.2rem;
+}
+
+
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* umum */
+.btn-yellow {
+  background: #ffcc00;
+  color: #000;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+  display: inline-block;
+  text-align: center;
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* khusus untuk tombol di dalam rank-card */
+.rank-footer .btn-yellow {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav a.btn-yellow {
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  background: #ffcc00;
+  color: #000;
+  transition: background 0.3s;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav a.btn-yellow:hover {
+  background: #e6b800;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+  }
+
+  .logo {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+  }
+
+  nav a,
+  nav a.btn-yellow {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: #1a1a1a;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* FITUR SECTION */
+.fitur {
+  padding: 50px 20px;
+  background: #121212;
+  text-align: center;
+}
+
+.fitur h2 {
+  color: #ffcc00;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.fitur p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.fitur-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.fitur-grid div {
+  background: #262626;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  min-width: 220px;
+}
+
+/* LINK SERVER */
+.server-links {
+  padding: 50px 20px;
+  background: #121212;
+  text-align: center;
+}
+
+.server-links h2 {
+  color: #ffcc00;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.link-card {
+  background: #1f1f1f;
+  padding: 16px 24px;
+  border-radius: 10px;
+  border: 1px solid #ffcc00;
+  color: white;
+  max-width: 280px;
+  width: 100%;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.link-card a {
+  color: #ffcc00;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.link-card a:hover {
+  text-decoration: underline;
+}
+
+/* TUTORIAL / SOSMED */
+.tutorial {
+  padding: 50px 20px;
+  background: #1a1a1a;
+  text-align: center;
+}
+
+.tutorial h2 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.tutorial p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-outline {
+  border: 2px solid #ffcc00;
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: #ffcc00;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+/* RANK SECTION */
+.rank-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #1a1a1a;
+}
+
+.rank-section h2 {
+  font-size: 2rem;
+  color: #ffcc00;
+  margin-bottom: 30px;
+}
+
+.rank-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  align-items: stretch;
+  background-color: #1a1a1a;
+}
+
+.rank-card {
+  background: #1a1a1a;
+  color: white;
+  border: 2px solid #ffcc00;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rank-card:hover {
+  transform: translateY(-5px);
+}
+
+.rank-card h3 {
+  color: #ffcc00;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rank-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.rank-card ul li {
+  margin-bottom: 8px;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.rank-footer {
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.rank-footer .btn-yellow {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.harga-bersih {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.harga-diskon-wrap {
+  margin-bottom: 16px;
+}
+
+.harga-asli {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+.harga-diskon {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* SUPPORT SECTION */
+.support-section {
+  padding: 50px 20px;
+  background: #1a1a1a;
+  text-align: center;
+}
+
+.support-section h2 {
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.support-section p {
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background: #111;
+  border-top: 1px solid #222;
+}

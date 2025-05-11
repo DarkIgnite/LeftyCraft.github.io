@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="logo.png">
+  <title>Halaman Utama - LeftyCraft</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+      margin-right: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .logo img {
+        height: 30px;
+      }
+
+      .logo {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  <script>
+    function copyIP() {
+      navigator.clipboard.writeText("leftycraft.my.id").then(function() {
+        alert("IP berhasil disalin: leftycraft.my.id");
+      });
+    }
+
+    function scrollToSupport() {
+      const supportSection = document.getElementById("support");
+      if (supportSection) {
+        supportSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+        <img src="logo.png" alt="LeftyCraft Logo">
+        <span>LeftyCraft</span>
+      </a>
+    </div>
+    <nav>
+      <a href="#" onclick="window.open('https://discord.gg/pY6QrjEshm', '_blank')">Discord</a>
+      <a href="ranks.html">Ranks</a>
+      <a href="#" onclick="scrollToSupport()">Support</a>
+      <a href="#" class="btn-yellow" onclick="copyIP()">Join Now</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Selamat Datang di LeftyCraft</h1>
+    <p>Temukan informasi lengkap dan dukung server dengan membeli rank!</p>
+    <a href="https://discord.gg/pY6QrjEshm" class="btn-yellow" target="_blank"><i class="fa-brands fa-discord"></i> Join Server</a>
+  </section>
+
+  <!-- Fitur -->
+  <section class="fitur">
+    <h2>Meningkatkan pengalaman bermainmu di server!</h2>
+    <p>Kami menyediakan fitur-fitur unggulan yang akan membuatmu betah di server.</p>
+    <div class="fitur-grid">
+      <div><i class="fa-solid fa-layer-group"></i> Banyak Fitur</div>
+      <div><i class="fa-solid fa-cubes"></i> GUI Mudah</div>
+      <div><i class="fa-solid fa-star"></i> Rank Lengkap</div>
+    </div>
+  </section>
+
+  <!-- Keunggulan Server -->
+  <section class="fitur">
+    <h2>Meningkatkan pengalaman bermainmu di server!</h2>
+    <p>Kenapa LeftyCraft jadi pilihan terbaik?</p>
+    <div class="fitur-grid">
+      <div><i class="fa-solid fa-earth-asia"></i> Skyblock & Pulau Luas</div>
+      <div><i class="fa-solid fa-dragon"></i> Sistem RPG & Dungeons</div>
+      <div><i class="fa-solid fa-flask"></i> Slimefun & Addon</div>
+      <div><i class="fa-solid fa-box-open"></i> Crate / Gacha</div>
+      <div><i class="fa-solid fa-sack-dollar"></i> Shop & PlayerShop</div>
+      <div><i class="fa-solid fa-columns-3"></i> CrazyEnchantments / CustomEnchant</div>
+    </div>
+  </section>
+
+  <!-- Link Server -->
+  <section class="server-links" id="support">
+    <h2>Informasi Server</h2>
+    <div class="link-grid">
+      <div class="link-card" onclick="copyIP()" style="cursor:pointer;"><i class="fa-solid fa-server"></i> IP Server: leftycraft.my.id | Bedrock Port: 20627</div>
+      <div class="link-card"><i class="fa-brands fa-discord"></i> Discord: <a href="https://discord.gg/pY6QrjEshm" target="_blank">discord.gg/pY6QrjEshm</a></div>
+      <div class="link-card"><i class="fa-solid fa-vote-yea"></i> Vote: <a href="https://minecraft-mp.com/server/341916/vote/" target="_blank">minecraft-mp.com/server/341916/vote/</a></div>
+      <div class="link-card"><i class="fa-brands fa-whatsapp"></i> Group Wa: <a href="https://chat.whatsapp.com/BQBZzXMyPVoDP5NZ6NvYUf" target="_blank">chat.whatsapp.com/BQBZzXMyPVoDP5NZ6NvYUf</a></div>
+    </div>
+  </section>
+
+  <!-- Sosial Media -->
+  <section class="tutorial">
+    <h2>Sosial Media</h2>
+    <p>Ikuti kami di media sosial untuk update terbaru!</p>
+    <div class="btn-row">
+      <a href="https://www.instagram.com/darkignite_who/" class="btn-outline" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@leftycraft.my.id" class="btn-outline" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 LeftyCraft. All rights reserved.</p>
+  </footer>
+</body>
+</html>
