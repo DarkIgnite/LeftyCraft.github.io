@@ -8,6 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script>
+    function copyIP() {
+      navigator.clipboard.writeText("leftycraft.my.id").then(function () {
+        alert("IP berhasil disalin: leftycraft.my.id");
+      });
+    }
+  </script>
 </head>
 <body>
 
@@ -21,7 +28,7 @@
     <nav>
       <a href="#" onclick="window.open('https://discord.gg/pY6QrjEshm', '_blank')">Discord</a>
       <a href="ranks.html">Ranks</a>
-      <a href="#" onclick="scrollToSupport()">Support</a>
+      <a href="support.html">Support</a>
       <a href="#" class="btn-yellow" onclick="copyIP()">Join Now</a>
     </nav>
   </header>
@@ -135,7 +142,7 @@
     <!-- Rank Luxury+ -->
     <div class="rank-card">
       <h3><i class="fa-solid fa-crown"></i> Rank Luxury+</h3>
-      <div class="harga-asli">Rp319.999</div>
+      <div class="harga-asli"><s>Rp319.999</s></div>
       <div class="harga-bersih">Rp249.999</div>
       <ul>
         <li>🌈 /chatcolor</li>
