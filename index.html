@@ -16,6 +16,48 @@
     }
   </script>
 </head>
+<script>
+  const serverIP = "leftycraft.my.id";
+
+async function updateStatusButton() {
+  const btn = document.getElementById("status-btn");
+  if (!btn) return;
+
+  try {
+    const response = await fetch(`https://api.mcsrvstat.us/2/${serverIP}`);
+    const data = await response.json();
+
+    if (data.online) {
+      btn.innerHTML = `<i class="fa-solid fa-signal"></i> Pemain Online: ${data.players.online}/${data.players.max}`;
+      btn.classList.remove("btn-yellow");
+      btn.classList.add("btn-green");
+    } else {
+      btn.innerHTML = `<i class="fa-solid fa-signal"></i> Offline`;
+      btn.classList.remove("btn-yellow", "btn-green");
+      btn.style.backgroundColor = "#e53935";
+      btn.style.color = "#fff";
+    }
+  } catch (e) {
+    console.error("Gagal ambil status:", e);
+    btn.innerHTML = `<i class="fa-solid fa-signal"></i> Tidak dapat terhubung`;
+    btn.classList.remove("btn-yellow", "btn-green");
+    btn.style.backgroundColor = "#999";
+    btn.style.color = "#000";
+  }
+}
+
+
+  function copyIP() {
+    navigator.clipboard.writeText(serverIP).then(() => {
+      alert("IP berhasil disalin: " + serverIP);
+    });
+  }
+
+  // Jalankan hanya setelah DOM siap
+  document.addEventListener("DOMContentLoaded", updateStatusButton);
+</script>
+
+
 <body>
   <header class="header">
     <div class="logo">
@@ -36,7 +78,10 @@
     <section class="hero">
       <h1>Selamat Datang di LeftyCraft</h1>
       <p>Temukan informasi lengkap dan dukung server dengan membeli rank!</p>
-      <a href="https://discord.gg/pY6QrjEshm" class="btn-yellow" target="_blank"><i class="fa-brands fa-discord"></i> Join Server</a>
+      <button id="status-btn" class="btn-yellow" onclick="copyIP()">
+  <i class="fa-solid fa-signal"></i> Mengecek status...
+</button>
+
     </section>
 
     <section class="fitur">
@@ -71,6 +116,12 @@
         <div class="link-card"><i class="fa-brands fa-whatsapp"></i> Group Wa: <a href="https://chat.whatsapp.com/BQBZzXMyPVoDP5NZ6NvYUf" target="_blank">chat.whatsapp.com/BQBZzXMyPVoDP5NZ6NvYUf</a></div>
       </div>
     </section>
+<section class="server-status">
+  <h2>Status Server</h2>
+  <div id="status">
+    <p>Mengecek status server...</p>
+  </div>
+</section>
 
     <section class="tutorial">
       <h2>Sosial Media</h2>

@@ -118,7 +118,6 @@ nav a.btn-yellow:hover,
   }
 }
 
-}
 /* TRANSISI HALAMAN */
 .page-content {
   animation: fadeSlideIn 0.7s ease-out;
@@ -133,6 +132,40 @@ nav a.btn-yellow:hover,
     opacity: 1;
     transform: translateY(0);
   }
+}
+.server-status {
+  background: #121212;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.server-status h2 {
+  color: #ffcc00;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#status {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  color: white;
+  font-size: 1.1rem;
+}
+#status-btn {
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#status-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 
@@ -156,6 +189,34 @@ nav a.btn-yellow {
 
 nav a.btn-yellow:hover {
   background: #e6b800;
+}
+/* Tombol status online dengan glow hijau */
+.btn-green {
+  background: #4caf50;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.btn-green:hover {
+  background: #66bb6a;
+  box-shadow: 0 0 8px #4caf50, 0 0 16px #4caf50, 0 0 32px #4caf50;
+  animation: pulseGreen 1.2s infinite alternate;
+}
+
+@keyframes pulseGreen {
+  from {
+    box-shadow: 0 0 6px #4caf50, 0 0 12px #4caf50;
+  }
+  to {
+    box-shadow: 0 0 12px #4caf50, 0 0 24px #4caf50;
+  }
 }
 
 @media (max-width: 768px) {
